@@ -1,5 +1,6 @@
 import random as rdm
 import pandas as pd
+import sqlite3
 
 n = 4
 
@@ -46,10 +47,31 @@ for sid in students['SID']:
         enrollments.loc[len(enrollments)] = new_row
 print('members & enrollments complete')
 
-# Write DataFrames to CSV
-students.to_csv('students.csv', index=False)
-projects.to_csv('projects.csv', index=False)
-courses.to_csv('courses.csv', index=False)
-members.to_csv('members.csv', index=False)
-enrollments.to_csv('enrollments.csv', index=False)
+# Open file for SQL*Plus output
+with open('insertUniversity.sql', 'w') as sql_file:
+    for index, row in students.iterrows():
+        # Create an INSERT statement for each row
+        sql_statement = f"INSERT INTO students (SID, Name, Major) VALUES ({row['SID']}, '{row['Name']}', '{row['Major']}');\n"
+        sql_file.write(sql_statement)
+
+    for index, row in projects.iterrows():
+        # Create an INSERT statement for each row
+        sql_statement = f"INSERT INTO projects (PID, P_Name) VALUES ({row['PID']}, '{row['P_Name']}');\n"
+        sql_file.write(sql_statement)
+    
+    for index, row in courses.iterrows():
+        # Create an INSERT statement for each row
+        sql_statement = f"INSERT INTO courses (CID, C_Name) VALUES ({row['CID']}, '{row['C_Name']}');\n"
+        sql_file.write(sql_statement)
+
+    for index, row in members.iterrows():
+        # Create an INSERT statement for each row
+        sql_statement = f"INSERT INTO members (PID, P_Name) VALUES ({row['PID']}, {row['SID']});\n"
+        sql_file.write(sql_statement)
+
+    for index, row in enrollments.iterrows():
+        # Create an INSERT statement for each row
+        sql_statement = f"INSERT INTO enrollments (CID, C_Name) VALUES ({row['CID']}, {row['SID']});\n"
+        sql_file.write(sql_statement)
+
 print('writes complete')
