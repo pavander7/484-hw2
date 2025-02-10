@@ -1,0 +1,5 @@
+LOAD DATA
+INFILE 'courses.csv'
+INTO TABLE Courses
+FIELDS TERMINATED BY ',' 
+(CID, C_Name)

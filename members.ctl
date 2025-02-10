@@ -1,0 +1,5 @@
+LOAD DATA
+INFILE 'members.csv'
+INTO TABLE Members
+FIELDS TERMINATED BY ',' 
+(PID, SID)
