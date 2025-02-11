@@ -1,5 +1,5 @@
 CREATE VIEW StudentPairs AS 
-SELECT s1.SID as SID1, s2.SID as SID2
+SELECT DISTINCT s1.SID as SID1, s2.SID as SID2
 FROM Students s1
 JOIN Enrollments e1 ON s1.SID = e1.SID
 JOIN Enrollments e2 ON e1.CID = e2.CID

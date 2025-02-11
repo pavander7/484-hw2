@@ -84,16 +84,7 @@ INSERT INTO Members(PID, SID) VALUES (4, 28);
 INSERT INTO Members(PID, SID) VALUES (5, 29);
 INSERT INTO Members(PID, SID) VALUES (6, 30);
 
--- UniversityQuery1
--- positives
--- EECS492 (CID 10): only CS majors
-INSERT INTO Enrollments(CID, SID) VALUES (10, 13);
-INSERT INTO Enrollments(CID, SID) VALUES (10, 14);
-INSERT INTO Enrollments(CID, SID) VALUES (10, 15);
-INSERT INTO Enrollments(CID, SID) VALUES (10, 16);
-INSERT INTO Enrollments(CID, SID) VALUES (10, 17);
--- negatives
--- EECS280 (CID 1): only non-CS majors
+-- EECS280 (CID 1)
 INSERT INTO Enrollments(CID, SID) VALUES (1, 1);
 INSERT INTO Enrollments(CID, SID) VALUES (1, 2);
 INSERT INTO Enrollments(CID, SID) VALUES (1, 3);
@@ -106,49 +97,61 @@ INSERT INTO Enrollments(CID, SID) VALUES (1, 10);
 INSERT INTO Enrollments(CID, SID) VALUES (1, 11);
 INSERT INTO Enrollments(CID, SID) VALUES (1, 12);
 
--- UniversityQuery2
--- positives
--- Paul (SID 1)
+-- EECS281 (CID 2)
+INSERT INTO Enrollments(CID, SID) VALUES (2, 26);
+INSERT INTO Enrollments(CID, SID) VALUES (2, 15);
+INSERT INTO Enrollments(CID, SID) VALUES (2, 18);
+INSERT INTO Enrollments(CID, SID) VALUES (2, 22);
+
+-- EECS442 (CID 3)
+INSERT INTO Enrollments(CID, SID) VALUES (3, 13);
+INSERT INTO Enrollments(CID, SID) VALUES (3, 19);
+INSERT INTO Enrollments(CID, SID) VALUES (3, 25);
+
+-- EECS445 (CID 4)
+INSERT INTO Enrollments(CID, SID) VALUES (4, 4);
+INSERT INTO Enrollments(CID, SID) VALUES (4, 13);
+INSERT INTO Enrollments(CID, SID) VALUES (4, 20);
+
+-- EECS482 (CID 5)
 INSERT INTO Enrollments(CID, SID) VALUES (5, 1);
-INSERT INTO Enrollments(CID, SID) VALUES (7, 1);
--- Cole (SID 10)
-INSERT INTO Enrollments(CID, SID) VALUES (6, 10);
-INSERT INTO Enrollments(CID, SID) VALUES (8, 10);
--- negatives
--- Brian (SID 2)
 INSERT INTO Enrollments(CID, SID) VALUES (5, 2);
--- Stuart (SID 3)
-INSERT INTO Enrollments(CID, SID) VALUES (8, 3);
--- Audrey (SID 4)
+
+-- EECS483 (CID 6)
 INSERT INTO Enrollments(CID, SID) VALUES (6, 3);
+INSERT INTO Enrollments(CID, SID) VALUES (6, 10);
+
+-- EECS484 (CID 7)
+INSERT INTO Enrollments(CID, SID) VALUES (7, 1);
 INSERT INTO Enrollments(CID, SID) VALUES (7, 3);
 
--- UniversityQuery3
--- positives
--- John (SID 13)
-INSERT INTO Enrollments(CID, SID) VALUES (3, 13);
-INSERT INTO Enrollments(CID, SID) VALUES (4, 13);
--- Paul (SID 1)
-INSERT INTO Enrollments(CID, SID) VALUES (9, 1);
--- Maggie (SID 26)
-INSERT INTO Enrollments(CID, SID) VALUES (2, 26);
--- negatives
--- Audrey (SID 4)
-INSERT INTO Enrollments(CID, SID) VALUES (9, 4);
+-- EECS485 (CID 8)
+INSERT INTO Enrollments(CID, SID) VALUES (8, 3);
+INSERT INTO Enrollments(CID, SID) VALUES (8, 10);
 
--- UniversityQuery4
--- EECS 486
+-- EECS 486 (CID 9)
+INSERT INTO Enrollments(CID, SID) VALUES (9, 1);
+INSERT INTO Enrollments(CID, SID) VALUES (9, 4);
 INSERT INTO Enrollments(CID, SID) VALUES (9, 20);
 INSERT INTO Enrollments(CID, SID) VALUES (9, 21);
 INSERT INTO Enrollments(CID, SID) VALUES (9, 22);
 INSERT INTO Enrollments(CID, SID) VALUES (9, 23);
 INSERT INTO Enrollments(CID, SID) VALUES (9, 24);
--- PHARMSCI 420
+
+-- EECS492 (CID 10)
+INSERT INTO Enrollments(CID, SID) VALUES (10, 13);
+INSERT INTO Enrollments(CID, SID) VALUES (10, 14);
+INSERT INTO Enrollments(CID, SID) VALUES (10, 15);
+INSERT INTO Enrollments(CID, SID) VALUES (10, 16);
+INSERT INTO Enrollments(CID, SID) VALUES (10, 17);
+
+-- PHARMSCI 420 (CID 11)
 INSERT INTO Enrollments(CID, SID) VALUES (11, 18);
 INSERT INTO Enrollments(CID, SID) VALUES (11, 19);
 INSERT INTO Enrollments(CID, SID) VALUES (11, 25);
 INSERT INTO Enrollments(CID, SID) VALUES (11, 27);
--- ENS 353 (Real List!)
+
+-- ENS 353 (CID 12)
 INSERT INTO Enrollments(CID, SID) VALUES (12, 1);
 INSERT INTO Enrollments(CID, SID) VALUES (12, 10);
 INSERT INTO Enrollments(CID, SID) VALUES (12, 11);
