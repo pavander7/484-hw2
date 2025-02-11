@@ -66,12 +66,12 @@ with open('insertUniversity.sql', 'w') as sql_file:
 
     for index, row in members.iterrows():
         # Create an INSERT statement for each row
-        sql_statement = f"INSERT INTO members (PID, P_Name) VALUES ({row['PID']}, {row['SID']});\n"
+        sql_statement = f"INSERT INTO members (PID, SID) VALUES ({row['PID']}, {row['SID']});\n"
         sql_file.write(sql_statement)
 
     for index, row in enrollments.iterrows():
         # Create an INSERT statement for each row
-        sql_statement = f"INSERT INTO enrollments (CID, C_Name) VALUES ({row['CID']}, {row['SID']});\n"
+        sql_statement = f"INSERT INTO enrollments (CID, SID) VALUES ({row['CID']}, {row['SID']});\n"
         sql_file.write(sql_statement)
 
 print('writes complete')
