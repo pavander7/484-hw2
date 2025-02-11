@@ -41,11 +41,14 @@ for sid in students['SID']:
         # Add new row for members
         new_row = [rdm.choice(projects['PID']), sid]
         members.loc[len(members)] = new_row
+print('members complete')
+
+for sid in students['SID']:
     for i in range(1, n + 1):
         # Add new row for enrollments
         new_row = [rdm.choice(courses['CID']), sid]
         enrollments.loc[len(enrollments)] = new_row
-print('members & enrollments complete')
+print('enrollments complete')
 
 # Open file for SQL*Plus output
 with open('insertUniversity.sql', 'w') as sql_file:
